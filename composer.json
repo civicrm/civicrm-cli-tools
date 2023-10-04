@@ -21,6 +21,10 @@
                 "path": "extern/{$id}",
                 "type": "phar"
             },
+            "civistrings.phar": {
+                "version": "2022-02-16-75f490ca",
+                "url": "https://download.civicrm.org/civistrings/civistrings.phar-{$version}"
+            },
             "civix.phar": {
                 "version": "23.08.2",
                 "url": "https://download.civicrm.org/civix/civix-{$version}.phar"

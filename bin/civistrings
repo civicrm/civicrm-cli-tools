@@ -1,0 +1,7 @@
+#!/usr/bin/env php
+<?php
+
+// Delegate to the corresponding PHAR executable.
+
+$prog = basename(__FILE__);
+require dirname(__DIR__) . '/extern/' . $prog . '.phar';
