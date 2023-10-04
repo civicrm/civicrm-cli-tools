@@ -1,0 +1,17 @@
+{
+    "name": "civicrm/cli-tools",
+    "authors": [
+        {
+            "name": "Tim Otten",
+            "email": "totten@civicrm.org"
+        }
+    ],
+    "require": {
+        "civicrm/composer-downloads-plugin": "^3.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "civicrm/composer-downloads-plugin": true
+        }
+    }
+}
