@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+TAG=$(date +'%Y.%m.%d.%s')
+git tag "$TAG"
