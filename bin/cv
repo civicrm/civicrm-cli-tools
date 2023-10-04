@@ -1,0 +1,5 @@
+#!/usr/bin/env php
+<?php
+
+$prog = basename(__FILE__);
+require dirname(__DIR__) . '/extern/' . $prog . '.phar';

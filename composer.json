@@ -13,27 +13,25 @@
         "allow-plugins": {
             "civicrm/composer-downloads-plugin": true
         },
-        "bin": ["extern/civix", "extern/cv", "extern/coworker"]
+        "bin": ["bin/civix", "bin/cv", "bin/coworker"]
     },
     "extra": {
         "downloads": {
             "*": {
-                "path": "extern/{$id}"
+                "path": "extern/{$id}",
+                "type": "phar"
             },
-            "civix": {
+            "civix.phar": {
                 "version": "23.08.2",
-                "url": "https://download.civicrm.org/civix/civix-{$version}.phar",
-                "type": "phar"
+                "url": "https://download.civicrm.org/civix/civix-{$version}.phar"
             },
-            "coworker": {
+            "coworker.phar": {
                 "version": "0.2",
-                "url": "https://download.civicrm.org/coworker/coworker.phar-v{$version}",
-                "type": "phar"
+                "url": "https://download.civicrm.org/coworker/coworker.phar-v{$version}"
             },
-            "cv": {
+            "cv.phar": {
                 "version": "0.3.47",
-                "url": "https://download.civicrm.org/cv/cv-{$version}.phar",
-                "type": "phar"
+                "url": "https://download.civicrm.org/cv/cv-{$version}.phar"
             }
         }
     }
