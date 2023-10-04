@@ -9,11 +9,11 @@
     "require": {
         "civicrm/composer-downloads-plugin": "^3.0"
     },
+    "bin": ["bin/civix", "bin/cv", "bin/coworker"],
     "config": {
         "allow-plugins": {
             "civicrm/composer-downloads-plugin": true
-        },
-        "bin": ["bin/civix", "bin/cv", "bin/coworker"]
+        }
     },
     "extra": {
         "downloads": {
