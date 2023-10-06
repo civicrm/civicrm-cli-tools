@@ -1,5 +1,6 @@
 {
     "name": "civicrm/cli-tools",
+    "license": "AGPL-3.0",
     "authors": [
         {
             "name": "Tim Otten",
