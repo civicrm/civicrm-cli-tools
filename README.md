@@ -19,7 +19,7 @@ composer require civicrm/cli-tools
 ```
 
 This adds CLI tools in [composer's `vendor/bin` folder](https://getcomposer.org/doc/articles/vendor-binaries.md).
-You can execute it through `composer exec` or `vendor/bin`.
+You can call commands through `composer exec` or `vendor/bin`.
 
 ```bash
 ## Ex #1: Call cv through `composer exec`
