@@ -9,7 +9,11 @@
     "require": {
         "civicrm/composer-downloads-plugin": "^3.0"
     },
-    "bin": ["bin/civix", "bin/cv", "bin/coworker"],
+    "bin": [
+        "bin/civix",
+        "bin/cv",
+        "bin/coworker"
+    ],
     "config": {
         "allow-plugins": {
             "civicrm/composer-downloads-plugin": true
@@ -23,19 +27,19 @@
             },
             "civistrings.phar": {
                 "version": "2022-02-16-75f490ca",
-                "url": "https://download.civicrm.org/civistrings/civistrings.phar-{$version}"
+                "url": "https://download.civicrm.org/civistrings/civistrings.phar-2022-02-16-75f490ca"
             },
             "civix.phar": {
                 "version": "23.08.2",
-                "url": "https://download.civicrm.org/civix/civix-{$version}.phar"
+                "url": "https://download.civicrm.org/civix/civix-23.08.2.phar"
             },
             "coworker.phar": {
                 "version": "0.2",
-                "url": "https://download.civicrm.org/coworker/coworker.phar-v{$version}"
+                "url": "https://download.civicrm.org/coworker/coworker.phar-v0.2"
             },
             "cv.phar": {
                 "version": "0.3.47",
-                "url": "https://download.civicrm.org/cv/cv-{$version}.phar"
+                "url": "https://download.civicrm.org/cv/cv-0.3.47.phar"
             }
         }
     }
