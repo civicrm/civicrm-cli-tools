@@ -39,8 +39,8 @@
                 "url": "https://download.civicrm.org/coworker/coworker.phar-v0.2"
             },
             "cv.phar": {
-                "version": "0.3.47",
-                "url": "https://download.civicrm.org/cv/cv-0.3.47.phar"
+                "version": "0.3.48",
+                "url": "https://download.civicrm.org/cv/cv-0.3.48.phar"
             }
         }
     }
