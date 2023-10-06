@@ -29,7 +29,7 @@ or
 
 ```
 ## Add composer's bin dir to your PATH
-PATH="$PWD/vendor/.bin:$PATH"
+PATH="$PWD/vendor/bin:$PATH"
 cv api4 Contact.get +l 1
 ```
 
