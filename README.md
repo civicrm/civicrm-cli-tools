@@ -15,7 +15,6 @@ It supports workflows based on `composer require`, `composer update`, and `vendo
 To add these tools to an existing `composer` build (e.g. Drupal 9/10 site), run:
 
 ```bash
-composer config repositories.repo-name vcs https://github.com/totten/civicrm-cli-tools
 composer require civicrm/cli-tools
 ```
 
@@ -33,15 +32,6 @@ or
 PATH="$PWD/vendor/.bin:$PATH"
 cv api4 Contact.get +l 1
 ```
-
-## Next steps
-
-This is a quick proof-of-concept. If feedback is positive, then some finalization steps would be:
-
-1. Add `scripts/update` to quickly update `composer.json`. (This should probably read from `civicrm-buildkit:phars.json` or else `phive`.)
-2. Move repo from `github.com/totten/` to `github.com/civicrm/`
-3. Publish on packagist.
-4. Simplify this README.
 
 ## In depth
 
