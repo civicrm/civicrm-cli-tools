@@ -1,29 +1,21 @@
 #!/usr/bin/env php
 <?php
 
-// Translate the list of PHAR URLs from buildkit:phars.json to cli-tools:composer.json.
-
 // define('FEED', '/tmp/phars.json');
 define('FEED', 'https://github.com/civicrm/civicrm-buildkit/raw/master/phars.json');
 define('COMMANDS', 'civistrings civix coworker cv');
 define('COMPOSER_JSON', dirname(__DIR__) . '/composer.json');
 
+if (PHP_SAPI !== 'cli') {
+  die("Update can only be run from command line.");
+}
+
 ###############################################################################
 
 /**
- * Run a command with printf notation.
- *
- * Variables with "%s" are shell-escaped.
+ * Take the list of current PHAR releases from buildkit:phars.json
+ * and update cli-tools:composer.json.
  */
-function runf(string $cmd, ...$args): void {
-  $escArgs = array_map('escapeshellarg', $args);
-  $cmd = sprintf($cmd, ...$escArgs);
-  passthru($cmd, $result);
-  if ($result !== 0) {
-    throw new \Exception("Command ($cmd) failed");
-  }
-}
-
 function main(): void {
   $tag = 'v' . gmdate('Y.m.d.') . time();
   echo "[tag=$tag]\n";
@@ -50,4 +42,19 @@ function main(): void {
   runf('git tag %s', $tag);
 }
 
+/**
+ * Run a command with printf notation.
+ *
+ * Variables with "%s" are shell-escaped.
+ */
+function runf(string $cmd, ...$args): void {
+  $escArgs = array_map('escapeshellarg', $args);
+  $cmd = sprintf($cmd, ...$escArgs);
+  passthru($cmd, $result);
+  if ($result !== 0) {
+    throw new \Exception("Command ($cmd) failed");
+  }
+}
+
+###############################################################################
 main();
