@@ -18,17 +18,18 @@ To add these tools to an existing `composer` build (e.g. Drupal 9/10 site), run:
 composer require civicrm/cli-tools
 ```
 
-This adds CLI tools in [composer's `vendor/bin` folder](https://getcomposer.org/doc/articles/vendor-binaries.md).
-You can call commands through `composer exec` or `vendor/bin`.
+This adds CiviCRM CLI tools to [composer's `vendor/bin` folder](https://getcomposer.org/doc/articles/vendor-binaries.md).
+
+You can call commands through `composer exec` or `vendor/bin`:
 
 ```bash
-## Ex #1: Call cv through `composer exec`
+## Example 1: Call cv through `composer exec`
 composer exec cv api4 Contact.get +l 1
 
-## Ex #2: Call cv through `./vendor/bin`
+## Example 2: Call cv through `./vendor/bin`
 ./vendor/bin/cv api4 Contact.get +l 1
 
-## Ex #3: Add cv your PATH
+## Example 3: Add cv your PATH
 PATH="/path/to/vendor/bin:$PATH"
 cv api4 Contact.get +l 1
 ```
