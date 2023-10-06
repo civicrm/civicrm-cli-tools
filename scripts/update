@@ -1,0 +1,53 @@
+#!/usr/bin/env php
+<?php
+
+// Translate the list of PHAR URLs from buildkit:phars.json to cli-tools:composer.json.
+
+define('FEED', '/tmp/phars.json');
+// define('FEED', 'https://github.com/civicrm/civicrm-buildkit/raw/master/phars.json');
+define('COMMANDS', 'civistrings civix coworker cv');
+define('COMPOSER_JSON', dirname(__DIR__) . '/composer.json');
+
+###############################################################################
+
+/**
+ * Run a command with printf notation.
+ *
+ * Variables with "%s" are shell-escaped.
+ */
+function runf(string $cmd, ...$args): void {
+  $escArgs = array_map('escapeshellarg', $args);
+  $cmd = sprintf($cmd, ...$escArgs);
+  passthru($cmd, $result);
+  if ($result !== 0) {
+    throw new \Exception("Command ($cmd) failed");
+  }
+}
+
+function main(): void {
+  $tag = 'v' . gmdate('Y.m.d.') . time();
+  echo "[tag=$tag]\n";
+
+  $pharsJson = json_decode(file_get_contents(FEED), TRUE);
+  $composerJson = json_decode(file_get_contents(COMPOSER_JSON), TRUE);
+  $commands = explode(' ', COMMANDS);
+
+  foreach ($commands as $command) {
+    $url = $pharsJson[$command]['url'];
+    $version = trim(strtr(basename($url), [
+      $command => "",
+      ".phar" => "",
+    ]), "-");
+    $composerJson['extra']['downloads']["{$command}.phar"] = [
+      'version' => ltrim($version, "v"),
+      'url' => $url,
+    ];
+  }
+
+  file_put_contents(COMPOSER_JSON, json_encode($composerJson, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
+  runf('composer update --lock');
+  runf('git commit composer.json composer.lock -m %s', "Update $tag");
+  runf('git tag %s', $tag);
+}
+
+main();
