@@ -35,8 +35,8 @@
                 "url": "https://download.civicrm.org/civix/civix-23.08.2.phar"
             },
             "coworker.phar": {
-                "version": "0.3",
-                "url": "https://download.civicrm.org/coworker/coworker.phar-v0.3"
+                "version": "0.4",
+                "url": "https://download.civicrm.org/coworker/coworker.phar-v0.4"
             },
             "cv.phar": {
                 "version": "0.3.48",
