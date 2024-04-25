@@ -40,6 +40,11 @@ function main(): void {
   runf('composer update --lock');
   runf('git commit composer.json composer.lock -m %s', "Update $tag");
   runf('git tag %s', $tag);
+  echo "\n\n";
+  echo "If these updates look alright, then you should push them:\n";
+  echo "\n";
+  echo "  git push origin master $tag\n";
+  echo "\n";
 }
 
 /**
