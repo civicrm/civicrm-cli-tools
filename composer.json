@@ -8,9 +8,10 @@
         }
     ],
     "require": {
-        "civicrm/composer-downloads-plugin": "^3.0"
+        "civicrm/composer-downloads-plugin": "^3.0 || ^4.0"
     },
     "bin": [
+        "bin/civistrings",
         "bin/civix",
         "bin/cv",
         "bin/coworker"
