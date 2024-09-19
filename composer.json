@@ -32,8 +32,8 @@
                 "url": "https://download.civicrm.org/civistrings/civistrings.phar-2022-08-30-c035da67"
             },
             "civix.phar": {
-                "version": "24.09.0",
-                "url": "https://download.civicrm.org/civix/civix-24.09.0.phar"
+                "version": "24.09.1",
+                "url": "https://download.civicrm.org/civix/civix-24.09.1.phar"
             },
             "coworker.phar": {
                 "version": "0.6",
