@@ -32,16 +32,16 @@
                 "url": "https://download.civicrm.org/civistrings/civistrings.phar-2022-08-30-c035da67"
             },
             "civix.phar": {
-                "version": "24.09.2",
-                "url": "https://download.civicrm.org/civix/civix-24.09.2.phar"
+                "version": "24.12.0",
+                "url": "https://download.civicrm.org/civix/civix-24.12.0.phar"
             },
             "coworker.phar": {
                 "version": "0.6",
                 "url": "https://download.civicrm.org/coworker/coworker-0.6.phar"
             },
             "cv.phar": {
-                "version": "0.3.58",
-                "url": "https://download.civicrm.org/cv/cv-0.3.58.phar"
+                "version": "0.3.59",
+                "url": "https://download.civicrm.org/cv/cv-0.3.59.phar"
             }
         }
     }
