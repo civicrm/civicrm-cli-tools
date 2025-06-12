@@ -40,8 +40,8 @@
                 "url": "https://download.civicrm.org/coworker/coworker-0.7.phar"
             },
             "cv.phar": {
-                "version": "0.3.64",
-                "url": "https://download.civicrm.org/cv/cv-0.3.64.phar"
+                "version": "0.3.65",
+                "url": "https://download.civicrm.org/cv/cv-0.3.65.phar"
             }
         }
     }
