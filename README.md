@@ -1,6 +1,6 @@
 # civicrm/cli-tools
 
-A bundle of CiviCRM-specific command-line tools. This specifically includes:
+A bundle of CiviCRM command-line tools. This specifically includes:
 
 * `cv`: General purpose administration / Swiss Army knife
 * `civistrings`: Scan source-code for translatable strings
