@@ -44,3 +44,18 @@ cv api4 Contact.get +l 1
     2. Add a stub script (e.g. `bin/cv`)
     3. Register the stub (`bin/cv`) for use with composer's `vendor/bin/`.
 * This layout should be able to leverage composer's platform-specific wiring (e.g. Windows `.bat` files).
+
+## Maintenance
+
+This project is derived from [civicrm-buildkit.git:phars.json](https://github.com/civicrm/civicrm-buildkit/blob/master/phars.json). Whenever there's a relevant update to `phars.json`, we should also update `civicrm-cli-tools`.
+
+For a maintainer of `civicrm/civicrm-cli-tools.git`, you can follow these steps:
+
+```bash
+git clone git@github.com:civicrm/civicrm-cli-tools.git
+cd civicrm-cli-tools
+./scripts/update
+git push <FIXME>
+```
+
+Note the output of `./script/update`. It will include details about how to push the update.
