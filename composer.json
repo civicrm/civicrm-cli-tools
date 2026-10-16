@@ -28,20 +28,20 @@
                 "type": "phar"
             },
             "civistrings.phar": {
-                "version": "2022-08-30-c035da67",
-                "url": "https://download.civicrm.org/civistrings/civistrings.phar-2022-08-30-c035da67"
+                "version": "2026-05-28-0ce9333d",
+                "url": "https://download.civicrm.org/civistrings/civistrings.phar-2026-05-28-0ce9333d"
             },
             "civix.phar": {
-                "version": "26.02.0",
-                "url": "https://download.civicrm.org/civix/civix-26.02.0.phar"
+                "version": "26.10.0",
+                "url": "https://download.civicrm.org/civix/civix-26.10.0.phar"
             },
             "coworker.phar": {
                 "version": "0.9",
                 "url": "https://download.civicrm.org/coworker/coworker-0.9.phar"
             },
             "cv.phar": {
-                "version": "0.3.71",
-                "url": "https://download.civicrm.org/cv/cv-0.3.71.phar"
+                "version": "0.3.72",
+                "url": "https://download.civicrm.org/cv/cv-0.3.72.phar"
             }
         }
     }
